@@ -62,4 +62,34 @@ for name, hero in zip(names, heroes):
 for value in zip(names, heroes, universes):
     print(value)
 
-# 6. unpacking values
+# 6. how to unpack values
+
+# set an underscore for a variable you won't use
+a, _ = (1, 2)
+print(a)
+# print(b)
+
+# this won't work:
+a, b, c = (1, 2, 3, 4, 5)
+# this will work:
+a, b, *c = (1, 2, 3, 4, 5)
+# or:
+a, b, *_ = (1, 2, 3, 4, 5)
+# or:
+a, b, *c, d = (1, 2, 3, 4, 5)
+
+# 7. Getting and setting attributes on a certain object
+
+
+class Person():
+    pass
+
+
+person = Person()
+
+first_key = 'first'
+first_val = 'Corey'
+
+setattr(person, 'first', 'Corey')
+
+print(person.first)
